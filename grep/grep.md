@@ -1,12 +1,12 @@
-#Grep
+# Grep
 Stampa le linee che verificano un pattern
 
-
+```
 grep [opzioni] pattern [file]
+```
 
-
-Opzioni
-
+### Opzioni
+```
 -E : --extended-regexp
 -A num : stampa anche le num righe successive ([A]fter) ad ogni corrispondenza.
 -B num : stampa anche le num righe precedenti ([B]efore) ad ogni corrispondenza.
@@ -17,7 +17,7 @@ Opzioni
 -h : no print file name for every match
 -l : stampa soli i nomi dei file che corrispondono
 -L : stampa i nomi dei file che non corrispondono
-
+```
 
 
 
