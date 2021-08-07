@@ -38,9 +38,16 @@ SecondaLista:
     Clicca [qui](http://www.google.com/) altro testo
 ```
 
-# Immagini
+## Immagini
 
 ```
     ![Alt_text_img](http://www.google.com/img.jpg "titolo")
+```
+***
+
+## Linea orizzonale
+
+```
+***
 ```
 
