@@ -11,6 +11,7 @@ _QuiCorsivo_
 ```
 
 ## Codice
+    `back-ticks
 ``` 
 ```C
 #include<stdio.h>
