@@ -11,9 +11,10 @@ _QuiCorsivo_
 ```
 
 ## Codice
-    `back-ticks
+
+`back-ticks` `
     
-Inline `code`
+Code Inline `code`
 
 ``` 
 ```C
@@ -55,7 +56,6 @@ SecondaLista:
 ```
 ***
 ```
-### [contenitore]
-::: warning
-*Qualche colore*
-:::
+
+
+
