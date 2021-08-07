@@ -11,12 +11,10 @@ _QuiCorsivo_
 ```
 
 ## Codice
-```
-```C
+``` ```C
 #include<stdio.h>
 void main(void) { }
-```
-```
+``` ```
 ## Liste
 ```
 TitoloLista:
