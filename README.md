@@ -21,9 +21,9 @@ return =;
 # Liste
 
 TitoloLista:
-*Ferrari
-*Maserati
-*Opel
+* Ferrari
+* Maserati
+* Opel
 
 SecondaLista:
 1. Pinarello
@@ -34,10 +34,10 @@ SecondaLista:
 
 # Link 
 '''
-Clicca [qui](http://www.google.com/) altro testo
+    Clicca [qui](http://www.google.com/) altro testo
 '''
 
 # Immagini
 '''
-![Alt_text_img](http://www.google.com/img.jpg "titolo")
+    ![Alt_text_img](http://www.google.com/img.jpg "titolo")
 '''
