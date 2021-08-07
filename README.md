@@ -2,15 +2,15 @@
 
 
 
-#Grassetto
+# Grassetto
 **QuiGrassetto**
 
 
-#Corsivo
+# Corsivo
 _QuiCorsivo_
 
 
-#Codice
+# Codice
 '#include<stdio.h>
 int main(void)
 {
@@ -18,7 +18,7 @@ return =;
 }
 '
 
-#Liste
+# Liste
 
 TitoloLista:
 *Ferrari
@@ -32,12 +32,12 @@ SecondaLista:
 
 
 
-#Link 
+# Link 
 '''
 Clicca [qui](http://www.google.com/) altro testo
 '''
 
-#Immagini
+# Immagini
 '''
 ![Alt_text_img](http://www.google.com/img.jpg "titolo")
 '''
