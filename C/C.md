@@ -27,6 +27,37 @@ Esempio:
 extern int sp;
 extern double val[];
 ```
+Le dimensioni devono essere specificate nella definizione e sono opzionali 
+nella dichiarazione. 
+
+## Varibili static
+
+* La dichiarazione static applicata a una varibile esterna (Le variabili interne non possono essere viste da altre funzioni) o a una funzione ne limita l'uso soltanto nel file nel quale si travano. 
+
+```C
+static char buffer[BUFFERSIZE]
+static int bufp = 0;
+```
+
+* La dichiarazione static applicata ad una variabile interne consente alla variabile di mantenere il suo valore tra due chiamate successive della funzione che la contiene. 
+
+
+
+
+## Inziazizzazione variabili
+
+Le variabili esterne e le static sono inizializzate a zero dal compilatore quando sono definite. 
+Le varibili automatiche non sono inizializzate dal compilatore e sono "sporche".
+
+```C
+int low = 0;
+char * day[] = {"Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"}; // warning in C++
+char pattern[] = "ould";
+```
+Se la dimensione del vettore è omessa, il compilatore calcola la lunghezza in
+base al numero di elementi presenti nella istruzione di inizializzazione.
+ 
+
 
 
 
