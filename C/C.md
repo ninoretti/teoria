@@ -164,7 +164,23 @@ punt = &nome[0]; // Assegna al puntatore il valore dell'indirizzo dell'array nom
 printf("%d\n", * punt);   // dereferenziato il puntantore stampa l'intero 81 (Q)
 printf("%s\n", punt);    // qui stampa la stringa in quanto è presente la direttiva %s
 ```
-#### puntatore a void
+#### Artmetica dei puntatori
+Sui valori contenuto nelle variabili puntatore è lecito effettuare sommme e sottrazioni
+```C
+int dim = 3;
+// crea un array di tre interi nello heap
+int p = (int *) malloc(dim * sizeof(int)); // alloca 3 * 4 byte di memoria
+*p = 0; // assegna il valore 0 alla prima posizione
+*(p++) = 1; // p++ incrementa di una unità (4byte) il valore contenuto in p
+*(p++) = 2;
+```
+L'operatore * ha priorità più alta rispetto ++
+```C
+++*p; // incrementa di uno l'oggetto puntato da p
+*p++; 
+*p += 1; // come sopra
+```
+
 
 
 
