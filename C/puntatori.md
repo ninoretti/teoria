@@ -1,3 +1,5 @@
+[indice](c.md)
+
 
 ## Puntatori e Array
 Un puntatore è una variabile (solitamente 8byte) che contiene l'indirizzo di una cella di memoria di un'altra variabile. 
