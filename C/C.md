@@ -112,7 +112,6 @@ La definizione di una  funzione può essere annullata con #undef (si assicura ch
 La direttiva #if valuta una espressione costante e se non è verificata include la #define. E' utilizzata per includere solo una volta
 i file header quando le #define possono essere utilizzate in differenti file. (Le varibili esterne 
 e i i prototipi di funzione devo essere definite una sola volta)
-
 ```C
 #if !define(BUFFER)
 #define BUFFER
@@ -130,7 +129,42 @@ Questa direttiva permette di usare #define diverse
 #endif
 #define HRD
 ```
-Invece di #if !define è altrimento usato #ifndef (if not define) oppure #ifdef (if define)
+Invece di #if !define è altrimento usato __#ifndef__ (if not define) oppure __#ifdef__ (if define)
+
+
+
+## Puntatori e Array
+Un puntatore è una variabile (solitamente 8byte) che contiene l'indirizzo di una cella di memoria di un'altra variabile. 
+Il compilatore deve conoscere il tipo del puntatore per delimitare la zona di memoria interessata e la sua codifica:
+ 1byte per i char, 4 byte per gli int, 8byte per i double ed altro
+ #### puntatore a void
+ Il puntatore di tipo void contiene un indirizzo di memoria ma non contiene informazioni sulla zona di memoria puntata,
+ per questo motivo non può essere dereferenziato. Prima di essere derefernziato bisogna effettuare un cast
+ ```C
+ //La funzione malloc ritorna un puntatore void 
+ // ad una determinata quantità allocata nello heap
+ int * p ;
+ p = (int *) malloc(sizeof(int));  // (int *) cast del puntatore
+ * p = 20;
+ ```
+#### puntatore ad intero
+```C
+int numero = 10;  // definizione della variabile
+int * p;         // dichiarazione di una variabile puntatore ad intero
+p = &numero;    // assegnazione di un valore alla variabile puntatore -> 
+                // contiene l'indirizzo della variabile numero
+printf("%d\n", * p);  // per accedere al contenuto della varibile puntata 
+                     // si deve dereferenziare il valore della variabile puntatore
+```
+#### Puntatore a carattere
+```C
+char nome[] = "Qui una stringa";  // definizione di una stringa di char
+char * punt;                     // definizione di un puntatore a char (non è un puntatore a stringa)
+punt = &nome[0]; // Assegna al puntatore il valore dell'indirizzo dell'array nome
+printf("%d\n", * punt);   // dereferenziato il puntantore stampa l'intero 81 (Q)
+printf("%s\n", punt);    // qui stampa la stringa in quanto è presente la direttiva %s
+```
+#### puntatore a void
 
 
 
