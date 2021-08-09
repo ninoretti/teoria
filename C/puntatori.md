@@ -87,4 +87,33 @@ for(int k=0; k<n;k++){
 for(int k=0; k<n;k++)
     printf("%d\n", **(numeri + k));
 ```
-   
+#### Puntatori e vettori multidimensionali
+Le due notazioni sono diverse benchè esse possono essere utilizzate
+con la notazione a[3][4] e b[3][4]
+
+```C
+int a[10][20];
+int *b[10];
+```
+a è un array bidimensionale di interi, b è un array di 10 di puntatori ad interi
+Se si vuole che b punti ad un vettore di 20 elementi o si inizializza staticamente
+o con il codice sotto scritto
+```C
+int numElementi = 20;
+for(int k=0; k<10; k++){
+    b[k] = (int *)malloc(numElementi*sizeof(int));
+    for(int j=0; j<numElementi;j++)
+        b[k][j] = (j+1)*(k+1);
+}
+```
+
+
+
+
+
+
+
+
+
+
+
