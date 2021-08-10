@@ -132,13 +132,73 @@ void main(void)
     printf("%d\n", pFunz(5,7));
 }
 ```
-Il programma è composto da due funzione relativamente complesse : somma e 
+Il programma è composto da due funzione relativamente complesse: somma e 
 sottrazione. 
 All'inizio del main è dichiarato un puntatore a funzione __pFunz__.
 La funzione puntata da __pFunz__ accetta due interi come argomenti e ritorna 
-un intero. La parentei (* pFunz) è necessaria altrimenti diventava 
-la funzione chiamata pFunz ritorna un puntatore ad intero.
+un intero. La parentesi (* pFunz) è necessaria altrimenti diventa 
+la funzione denominata pFunz ritorna un puntatore ad intero.
 
+#### Array di puntatori a funzione
+
+Modificando la dichiarazione in puntatore a puntatori di funzioni 
+che ritornano un interno e accettano come parametri due interi.
+Anche qui le parentesi sono necessarie per legare l'operatore *
+con il token pFunz
+```C
+#include<stdio.h>
+int somma(int x, int y) 
+{
+    return x+y;
+}
+int differenza(int x, int y) 
+{
+    return x-y;
+}
+
+void main(void)
+{
+    int (*(* pFunz))(int, int); // Array di puntantore a funzione
+    char op = '-';
+    if(op == '+')
+        pFunz[0] = somma;
+    else if (op == '-')
+        pFunz[0] = differenza;
+    printf("%d\n", pFunz[0](5,7));
+}
+```
+#### Passaggio di una funzione come parametro ad un funzione
+
+Il programma è composto da tre funzioni somma, sottrazione e operazione.
+La funzione operazione riceve tre parametri: due interi e __una funzione__.
+La funzione passata come perametro, accetta due interi e ritorna un intero.
+
+
+La funzione operazione è valida solo per testare il funzionamento
+del meccanismo utilizzato; diversamente è superflua.
+```C
+#include<stdio.h>
+int somma(int x, int y) 
+{
+    return x+y;
+}
+int differenza(int x, int y) 
+{
+    return x-y;
+}
+int operazione(int (*operatore)(int, int), int x, int y)
+{
+    return operatore(x,y);
+}
+
+void main(void)
+{
+    printf("Somma %d\n", operazione(somma,5,7));
+    printf("Differenza %d\n", operazione(differenza,5,7));
+}
+```
+Il meccanismo ha come difficoltà l'utilizzo delle parentesi () per associare
+l'operatore * al nome della funzione e non al valore di ritorno.
 
 
 
