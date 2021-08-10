@@ -64,10 +64,6 @@ char pattern[] = "ould";
 ```
 Se la dimensione del vettore è omessa, il compilatore calcola la lunghezza in
 base al numero di elementi presenti nella istruzione di inizializzazione.
- 
-***
-
-
 
 
 

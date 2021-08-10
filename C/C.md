@@ -5,6 +5,13 @@ C programming language - B. Kerningan D. Ritche
 [indice](c.md)
 
 [Variabili](variabili.md)
++ Dichiarazione
++ Definizione
++ Scope
++ Varibili _extern_
++ Variabili _static_
++ Inizializzazione
++ 
 
 [puntatori](puntatori.md)
 + Puntatori e array
@@ -16,10 +23,13 @@ C programming language - B. Kerningan D. Ritche
 + Vettori di puntantori
 + Puntatori a vettori multidimensionali
 + Puntantori a funzioni
-+ Array di puntatore a funzione
++ Array di puntatori a funzione
 + Passaggio di una funzione come parametro
 
 [preprocessore](preprocessore.md)
++ Include
++ Define
++ IF Define
 
 
 #### Argomenti della linea di comando
