@@ -7,6 +7,17 @@ C programming language - B. Kerningan D. Ritche
 [Variabili](variabili.md)
 
 [puntatori](puntatori.md)
++ Puntatori e array
++ Puntantore a void
++ Puntatore ad intero
++ Puntantore a char
++ Aritmetica dei puntatori
++ Puntatori e argomenti di funzioni
++ Vettori di puntantori
++ Puntatori a vettori multidimensionali
++ Puntantori a funzioni
++ Array di puntatore a funzione
++ Passaggio di una funzione come parametro
 
 [preprocessore](preprocessore.md)
 
