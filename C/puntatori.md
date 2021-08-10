@@ -1,4 +1,4 @@
-[indice](c.md)
+[indice](C.md)
 
 
 ## Puntatori e Array
