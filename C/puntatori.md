@@ -107,6 +107,38 @@ for(int k=0; k<10; k++){
 }
 ```
 
+#### Puntatori a funzione
+Una funzione non è una varibile, tuttavia può essere dereferenziata con un puntatore
+allo stesso modo come se fosse un array.
+```C
+#include<stdio.h>
+int somma(int x, int y) 
+{
+    return x+y;
+}
+int differenza(int x, int y) 
+{
+    return x-y;
+}
+
+void main(void)
+{
+    int (* pFunz)(int, int);
+    char op = '-';
+    if(op == '+')
+        pFunz = somma;
+    else if (op == '-')
+        pFunz = differenza;
+    printf("%d\n", pFunz(5,7));
+}
+```
+Il programma è composto da due funzione relativamente complesse : somma e 
+sottrazione. 
+All'inizio del main è dichiarato un puntatore a funzione __pFunz__.
+La funzione puntata da __pFunz__ accetta due interi come argomenti e ritorna 
+un intero. La parentei (* pFunz) è necessaria altrimenti diventava 
+la funzione chiamata pFunz ritorna un puntatore ad intero.
+
 
 
 
