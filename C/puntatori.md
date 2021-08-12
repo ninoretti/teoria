@@ -1,7 +1,7 @@
 [indice](c.md)
 
 
-## Puntatori e Array
+#### Puntatori e Array
 Un puntatore è una variabile (solitamente 8byte) che contiene l'indirizzo di una cella di memoria di un'altra variabile. 
 Il compilatore deve conoscere il tipo del puntatore per delimitare la zona di memoria interessata e la sua codifica:
  1byte per i char, 4 byte per gli int, 8byte per i double ed altro
