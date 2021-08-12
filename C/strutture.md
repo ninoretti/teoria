@@ -101,14 +101,68 @@ triangolo[0].y = 9;
 .......
 
 ####Typedef
+Typedef si usa per poter creare nuovi tipi
+```C
+typedef int Lenght;
+```
+Definisce il tipo Lenght (L maiuscola) come sinonimo di int
+```C
+typedef *char String;
+```
+Definisce String (S maiuscola) come sinonimo di * char
 
+Qualche esempio più complesso
+```C
+typedef struct tnode * TreePtr;
 
+typedef struct tnode {
+    int x;
+    char * word;
+    TreePtr left;
+    TreePtr right;
+} TreeNode;
+```
+La prime dichiara tipo TreePtr puntatore a tnode
 
+La seconda dichiara un tipo TreeNode come struttura con tag tnode.
 
+La dichiarazione __typedef non crea un nuovo tipo__, assegna un nome diverso
+ad un tipo esistente. Il __vantaggio di typedef__ è permettere di parametrizzare
+il programma scritto. In caso di cambiamenti si modificano le istruzioni typedef.
+ 
+####Union
+Una union è una variabile che può contenere in diversi momenti variabili 
+di tipo diverso. La sua dichiarazione è simile alle __struct__, il compilatore 
+alloca alla union memoria che possa contenere la variabile più grande in 
+occupazione di memoria
+```C
+union union_tag {
+    int i;
+    char * s;
+    float f;
+} u;
+```
+Il compito di trattare adeguatamente le variabili contenute spetta al programmatore.
 
-
-
-
+##### Inizializzazione
+```C
+union union_tag w = {4};
+```
+#####Assegnamento
+L'assegnamento avviene con la notazione puntata
+```C
+u.f = 123.123;
+```
+####Campi di bit
+Può essere utile definire variabili di lunghezza minore di 8 bit.
+```C
+struct {
+    unsigned int is_keyword : 1;
+    unsigned int is_extern  : 1;
+    unsigned int is_static  : 1;
+} flags;
+```
+Definisce una variabile flag che contiene tre __field__ di un bit.
 
 
 
