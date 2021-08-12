@@ -1,7 +1,13 @@
 #### Strutture
 Le strutture raggruppano un insieme di dati anche eterogenei.
-La dichiarazione della struttura deve essere posta al di __fuori del main__.
-Le variabili sono dichiarate come con la regola di scope.
+
+Le strutture possono essere copiate, assegnate, indirizzate e manipolate con 
+gli operatori punto. Non possono essere confrontate (nella loro totalità). 
+
+La dichiarazione della struttura deve essere dichiarata al di __fuori del main__,
+in genere in un file .h
+
+Le variabili sono definite con le normali regole di scope.
 ```C
 struct point {
     int x;
@@ -49,6 +55,67 @@ Assegamento con notazione puntata
 rettangolo.point1.x = 4;
 rettangolo.point1.y = 8;
 ```
+#### Puntatori a strutture
+Se ad una funzione deve essere passata una struttura troppo grande, allora conviene
+passa il puntatore alla struttura.
+```C
+struct point {
+    int x;
+    int y;
+} * p;
+// oppure anche
+struct point * pt;
+```
+Per indirizzare i membri della struttura si usa
+```C
+(*p).x = 5;
+p->x = 5;
+```
+Le parentesi sono necessarie in quanto __*__ ha priorità minore del __.__
+
+dato il notevole uso si è introdotto l'operatore ->
+
+```C
+++p->x; //
+```
+Incrementa x e non p, -> ha priorità più alta rispetto a ++
+
+#### Vettori di strutture
+```C
+struct point {
+    int x;
+    int y;
+} triangolo[];
+```
+#####Inizializzazione
+triangolo[] = {
+    {0,1},{2,3},{4,5}
+};
+#####Assegnamento
+```C
+triangolo[0].x = 7;
+triangolo[0].y = 9;
+```
+####Strutture ricorsive
+
+.......
+
+####Typedef
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
