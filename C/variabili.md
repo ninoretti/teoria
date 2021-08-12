@@ -2,7 +2,7 @@
 Appunti liberamente tratti, per sostegno alla propria memoria, dal libro:
 C programming language - B. Kerningan D. Ritche
 ```
-[indice](c.md)
+[indice](C.md)
 
 ## Le variabili
 
@@ -64,10 +64,6 @@ char pattern[] = "ould";
 ```
 Se la dimensione del vettore è omessa, il compilatore calcola la lunghezza in
 base al numero di elementi presenti nella istruzione di inizializzazione.
- 
-***
-
-
 
 
 
