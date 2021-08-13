@@ -31,6 +31,19 @@ C programming language - B. Kerningan D. Ritche
 + Define
 + IF Define
 
+[strutture](strutture.md)
++ Struct
++ Strutture nidificate
++ Puntatori a strutture
++ Vettori di strutture
++ Strutture ricorsive (da scrivere) 
++ Typedef
++ Union
++ Campi di bit
+
+[Input Output](io.md)
++ 
+
 
 #### Argomenti della linea di comando
 Il main accetta come parametri un array di stringhe.

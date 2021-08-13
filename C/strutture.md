@@ -1,4 +1,6 @@
+[indice](C.md)
 #### Strutture
+#####Struct
 Le strutture raggruppano un insieme di dati anche eterogenei.
 
 Le strutture possono essere copiate, assegnate, indirizzate e manipolate con 
@@ -163,14 +165,5 @@ struct {
 } flags;
 ```
 Definisce una variabile flag che contiene tre __field__ di un bit.
-
-
-
-
-
-
-
-
-
 
 
