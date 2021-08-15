@@ -1,6 +1,6 @@
-[indice](C.md)
+[indice](readme.md)
 #### Strutture
-#####Struct
+##### Struct
 Le strutture raggruppano un insieme di dati anche eterogenei.
 
 Le strutture possono essere copiate, assegnate, indirizzate e manipolate con 
@@ -89,20 +89,20 @@ struct point {
     int y;
 } triangolo[];
 ```
-#####Inizializzazione
+##### Inizializzazione
 triangolo[] = {
     {0,1},{2,3},{4,5}
 };
-#####Assegnamento
+##### Assegnamento
 ```C
 triangolo[0].x = 7;
 triangolo[0].y = 9;
 ```
-####Strutture ricorsive
+#### Strutture ricorsive
 
 .......
 
-####Typedef
+#### Typedef
 Typedef si usa per poter creare nuovi tipi
 ```C
 typedef int Lenght;
@@ -132,7 +132,7 @@ La dichiarazione __typedef non crea un nuovo tipo__, assegna un nome diverso
 ad un tipo esistente. Il __vantaggio di typedef__ è permettere di parametrizzare
 il programma scritto. In caso di cambiamenti si modificano le istruzioni typedef.
  
-####Union
+#### Union
 Una union è una variabile che può contenere in diversi momenti variabili 
 di tipo diverso. La sua dichiarazione è simile alle __struct__, il compilatore 
 alloca alla union memoria che possa contenere la variabile più grande in 
@@ -155,7 +155,7 @@ L'assegnamento avviene con la notazione puntata
 ```C
 u.f = 123.123;
 ```
-####Campi di bit
+#### Campi di bit
 Può essere utile definire variabili di lunghezza minore di 8 bit.
 ```C
 struct {
