@@ -1,16 +1,13 @@
 ```
-Appunti liberamente tratti, per sostegno alla propria memoria, dal libro:
-C programming language - B. Kerningan D. Ritche
+Appunti liberamente tratti, per sostegno alla propria memoria, dal libro: C  language - B.Kerningan D.Ritche
 ```
-[indice](C.md)
-
 [Variabili](variabili.md)
 + Dichiarazione, Definizione
 + Scope
 + Varibili _extern_  _static_
 + Inizializzazione
 
-[puntatori](puntatori.md)
+[Puntatori](puntatori.md)
 + Puntatori e array
 + Puntantore a void, intero, char
 + Aritmetica dei puntatori
@@ -21,12 +18,12 @@ C programming language - B. Kerningan D. Ritche
 + Array di puntatori a funzione
 + Passaggio di una funzione come parametro
 
-[preprocessore](preprocessore.md)
+[Preprocessore](preprocessore.md)
 + Include
 + Define
 + IF Define
 
-[strutture](strutture.md)
+[Strutture](strutture.md)
 + Struct
 + Strutture nidificate
 + Puntatori a strutture
