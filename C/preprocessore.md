@@ -1,4 +1,4 @@
-[indice](C.md)
+[indice](readme.md)
 
 
 ## Il preprocessore

@@ -2,7 +2,7 @@
 Appunti liberamente tratti, per sostegno alla propria memoria, dal libro:
 C programming language - B. Kerningan D. Ritche
 ```
-[indice](C.md)
+[indice](readme.md)
 
 ## Le variabili
 

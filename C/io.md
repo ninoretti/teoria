@@ -1,3 +1,5 @@
+[indice](readme.md)
+
 #### Accesso a file
 ##### fclose()
 Chiude il file aperto in precedenza, svuota il buffer associato.

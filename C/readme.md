@@ -5,19 +5,14 @@ C programming language - B. Kerningan D. Ritche
 [indice](C.md)
 
 [Variabili](variabili.md)
-+ Dichiarazione
-+ Definizione
++ Dichiarazione, Definizione
 + Scope
-+ Varibili _extern_
-+ Variabili _static_
++ Varibili _extern_  _static_
 + Inizializzazione
-+ 
 
 [puntatori](puntatori.md)
 + Puntatori e array
-+ Puntantore a void
-+ Puntatore ad intero
-+ Puntantore a char
++ Puntantore a void, intero, char
 + Aritmetica dei puntatori
 + Puntatori e argomenti di funzioni
 + Vettori di puntantori
@@ -42,7 +37,8 @@ C programming language - B. Kerningan D. Ritche
 + Campi di bit
 
 [Input Output](io.md)
-+ 
++ fclose, fopen
++ fscanf, fprintf
 
 
 #### Argomenti della linea di comando
