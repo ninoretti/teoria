@@ -7,14 +7,14 @@ youtube-dl -F <video URL>
 #### Youtube scarica video in diversi formati
 Diversi formati di youtube.com
 
-18  mp4 640x360    360p
-22  mp4 1280x720   720p 
++ 18  mp4 640x360    360p
++ 22  mp4 1280x720   720p 
 
-Video formato 720p
+__Video formato 720p__
 ```BASH
 youtube-dl -f 22 <video URL>
 ```
-Video e sottotitoli automatici 
+__Video e sottotitoli automatici__
 ```BASH
 youtube-dl -f 22  --write-auto-sub <video URL>
 ```
