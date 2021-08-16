@@ -1,5 +1,7 @@
 # Youtube-dl
 
+[youtube-dl guida ufficiale](https://github.com/ytdl-org/youtube-dl/blob/master/README.md)
+
 ### Richiesta formati disponibili
 ```BASH
 youtube-dl -F <video URL>
@@ -57,40 +59,42 @@ date
 ## Playlist
 
 ```BASH
-youtube-dl -i -f 22 --write-auto-sub --yes-playlist --playlist-end 5 'https://www.youtube.com/playlist?list=PLjUC8HjyxGTS_kWuWJLanHLAkkg6Lombb'
+youtube-dl -i -f 22 --write-auto-sub --yes-playlist --playlist-end 5 /
+'https://www.youtube.com/playlist?list=PLjUC8HjyxGTS_kWuWJLanHLAkkg6Lombb'
 ```
-> -i continue on download errors
 
-> 
-> --playlist-start NUMBER              Playlist video to start at (default is
->                                      1)
-> --playlist-end NUMBER                Playlist video to end at (default is
->                                      last)
-> --playlist-items ITEM_SPEC           Playlist video items to download.
->                                      Specify indices of the videos in the
->                                      playlist separated by commas like: "--
->                                      playlist-items 1,2,5,8" if you want to
->                                      download videos indexed 1, 2, 5, 8 in
->                                     the playlist. You can specify range: "
->                                      --playlist-items 1-3,7,10-13", it will
->                                      download the videos at index 1, 2, 3,
->                                      7, 10, 11, 12 and 13.
++ -i continue on download errors
+ 
++ --playlist-start NUMBER              
+Playlist video to start at (default is1)
 
++ --playlist-end NUMBER                
+Playlist video to end at (default is last)
 
++ --playlist-items ITEM_SPEC           
+Playlist video items to download. Specify indices of the videos in the
+playlist separated by commas like: "--playlist-items 1,2,5,8" 
+if you want to download videos indexed 1, 2, 5, 8 in the playlist.
+                                      
++ --playlist-items 1-3,7,10-13" 
+it will download the videos at index 1, 2, 3,7, 10, 11, 12 and 13.
 
-> --no-playlist                        Download only the video, if the URL
->                                      refers to a video and a playlist.
-> --yes-playlist                       Download the playlist, if the URL
->                                      refers to a video and a playlist.
++ --no-playlist
+Download only the video, if the URL refers to a video and a playlist.
 
++ --yes-playlist 
+Download the playlist, if the URL refers to a video and a playlist.
 
+#### Esempi utili con template
 + Download YouTube playlist videos in separate directory indexed by video order in a playlist
 ```BASH
-$ youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re
+$ youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
+https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re
 ```
 + Download all playlists of YouTube channel/user keeping each playlist in separate directory:
 ```BASH
-$ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/user/TheLinuxFoundation/playlists
+$ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
+https://www.youtube.com/user/TheLinuxFoundation/playlists
 ```
 
 
