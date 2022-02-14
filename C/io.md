@@ -8,7 +8,7 @@ certezza che i dati sono stati scritti.
 
 __int fclose(*fp);__ ritorna 0 se la chiusura ha avuto buon fine.
 ```C
-if ( fclose(*fp) != 0 ) {
+if ( fclose(fp) != 0 ) {
     fprintf(stderr, "Error closing input file.\n");
     return -2;
 }
