@@ -17,4 +17,12 @@ Come Bash espande alcuni gruppi di caratteri (_Bash non supporta le regx_)
 * __{ }__ Espansione delle `{2..5}` _2 3 4 5 6 7_ `ls *.{c,o,h}` 
 
 ## Modifica file system
-__cp__ copia file -R 
+__cp__ copia file -R 'cp -R *mp4 ../mov/'
+
+
+
+## Manipolazione dei permessi
+
+* __chmod__  'chmod 755 mioFile.php'
+* __chown__  'chown -R lnx *'
+* __chgrp__  'chgrp -R lnx *'
