@@ -5,3 +5,31 @@ al testo
 ```
 sed [opzioni] script [file]
 ```
+
+## Sostituzione testo
+* E' sostituita sola la prima occorrenza trovata
+```BASH
+sed 's/regxpr/rimpiazzo/'
+```
+
+## Sostituzione globale
+* g indica che la sostituzione e' eseguita ' per tutte le righe e non per la prima occorrenza
+```BASH
+sed 's/regexp/rimpiazzo/g'
+```
+
+
+## Cancella le righe
+* Cancella le righe che soddistano una condizione
+```BASH
+sed '/regexpr/d'
+```
+__Cancella la riga n__
+```BASH
+sed 'nd' cancella la n riga
+```
+
+
+```BASH
+
+```
