@@ -3,8 +3,12 @@ Sed è un editor di stream, è usato per effettuare delle trasformazioni
 al testo 
 
 ```
-sed [opzioni] script [file]
+sed 's/morte/torte/' divina.txt
 ```
+```BASH
+echo $stringa | sed 's/regxpr/rimpiazzo/'
+```
+
 
 ## Sostituzione testo
 * E' sostituita sola la prima occorrenza trovata
