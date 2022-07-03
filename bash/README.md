@@ -26,3 +26,22 @@ __cp__ copia file -R `cp -R *mp4 ../mov/`
 * __chmod__  `chmod 755 mioFile.php`
 * __chown__  `bashchown -R lnx *`
 * __chgrp__  `chgrp -R lnx *`
+
+## Comandi utili
+
+#### stat
+Visualizza varie informazioni sul file `stat file`
+* visualizza la data di ultima modifica
+```BASH
+stat -c %y file
+```
+#### touch
+Gestisce il timestamp, se il file non esiste lo crea `touch file`
+* assegna una determinata data di ultima modifica del file
+```BASH
+touch -d $data_modifica file
+```
+
+
+
+
