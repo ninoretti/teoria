@@ -52,19 +52,34 @@ In python3 non è necessario
 ```
 
 ### Stringhe
-
+```
 stringa1 = 'Questa è una stringa racchiusa con apici singoli'
 stringa2 = "Questa è una stringa racchiusa con apici doppi"
-
+```
+#### Stringa su più linee
+```
 Stringa3 = "Questa è una stringa\
 su più righe"
-
+```
+```
 stringaDivina = "La bocca sollevò dal fiero pasto\n\
 quel peccator, forbendola ai capelli\n\
 del capo che elli aveva di retro guasto\n"
-
-
-
+```
+#### Stringa raw
+Nella stringa raw non sono necessari \n e \ diversamente saranno resi visibili
+```
+stringaRaw = __r__"Trasumanar significar per verba
+non si poria; però l'esemplio basti
+a cui esperienza Grazia serba."
+```
+#### Uso delle triple """ o '''
+```
+longString = """Trasumanar significar per verba
+non si poria; però l'essemplo basti
+a cui esperienza grazia serba.
+"""
+```
 
 
 
