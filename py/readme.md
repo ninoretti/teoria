@@ -1,6 +1,8 @@
 # Python
-
 _Fonte "Tutorial di Python" Versione 2.3.4_
+
+[Controllo flusso](flusso.md)
+[funzioni](funzioni.md)
 
 ### Avviare python
 
@@ -205,8 +207,15 @@ uno.append("1")
 4
 ```
 
+### Esempio di uso di python
+Fibonacci i primi 19 numeri
 
-
+```PYTHON
+a, b = 0, 1
+while b < 1000:
+    print(b)
+    a, b = b, a + b
+```
 
 
 
