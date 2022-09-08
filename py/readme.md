@@ -57,10 +57,8 @@ stringa1 = 'Questa è una stringa racchiusa con apici singoli'
 stringa2 = "Questa è una stringa racchiusa con apici doppi"
 ```
 #### Stringa su più linee
-```
-Stringa3 = "Questa è una stringa\
-su più righe"
-```
+Il carattere `\` indica che la stringa continua alla riga successiva, il carattere
+__\n__ indica di andare a capo
 ```
 stringaDivina = "La bocca sollevò dal fiero pasto\n\
 quel peccator, forbendola ai capelli\n\
@@ -68,18 +66,147 @@ del capo che elli aveva di retro guasto\n"
 ```
 #### Stringa raw
 Nella stringa raw non sono necessari \n e \ diversamente saranno resi visibili
-```
-stringaRaw = __r__"Trasumanar significar per verba
+come fossero caratteri ordinari. 
+
+```stringaRaw = r"Trasumanar significar per verba
 non si poria; però l'esemplio basti
 a cui esperienza Grazia serba."
 ```
-#### Uso delle triple """ o '''
+
+#### Stringe con uso delle triple """  o ''' 
 ```
 longString = """Trasumanar significar per verba
 non si poria; però l'essemplo basti
 a cui esperienza grazia serba.
 """
 ```
+
+### Indicizzazione delle stringhe
+```
+parola = "Commedia" 
+>>> parola[4]
+'e'
+>>> parola[0:2]
+'Co'
+>>> parola[2:4]
+'mmedia'
+>>> parola[:2]
+'Co'
+>>> parola[2:0]
+'mmedia'
+>>> parola[-1]
+'a'
+>>> parola[-2]
+'ia'
+>>> parola[0:-2]
+'Commed'
+>>> parola[:-2]
+'Commed'
+```
+Le stringhe non possono essere modificate `parola[0] = P` non è consentita.
+
+#### Qualche errore:
+```
+>>> parola[10]  # errore out of range
+>>> parola[-100] # errore
+```
+### Non sono errori
+```
+>>> parola[0:10]
+'Commedia'
+>>> parola[-100:12] 
+'Commedia'
+```
+### Concatenazione delle stringhe
+```
+"Divina" + commedia
+"La Divina " + parola[0:7] + " di Dante"
+
+```
+#### Lo schema della indicizzazione 
+
+```
++---+---+---+---+---+---+---+---+
+| C | o | m | m | e | d | i | a |
++---+---+---+---+---+---+---+---+
+  0   1   2   3   4   5   6   7
+ -8  -7  -6  -5  -4  -3  -2  -1
+ -0 
+```
+### Stringhe Unicode
+```
+>>> stringaUnicode = u"Questa\u0020è\u0020una\u0020stringa\u0020Unicode"
+u'Questa è una stringa Unicode'
+```
+#### Stringa Unicode raw
+Applica la codifica Unicode nel caso le barre oblique siano dispari
+```
+>>> stringaUnicodeRaw = ur"Ciao\\u0020Mondo"
+u'Ciao\\u0020Mondo
+```
+La modalità raw è utile nelle espressioni regolari
+
+## Liste
+
+Le liste sono raggruppamenti ordinati di valori modificabili composti
+
+```PYTHON
+>>> lst = ["Ciao", 123, "753", "Roma"]
+>>> lst
+["Ciao", 123, "753", "Roma"]
+```
+Gli elementi della lista sono individuati con gli indici
+
+```PYTHON
+>>> lst[0]
+'Ciao'
+>>> lst[1:-1]
+[123, "753"]
+```
+#### Le liste sono modificabili
+Assegnamento di un nuovo valore
+```PYTHON
+lst[1] = lst[1] + 630
+lst[0] = "Salve"
+```
+Rimpiazza alcuni elementi (Assegnamento multiplo)
+```PYTHON
+lst[0:2] = ["Ave", -44]
+```
+Rimuove alcuni elementi 
+```PYTHON
+lst[1:3] = []
+```
+Inserisce alcuni elementi
+```PYTHON
+lst[1:1] = ["Alma", "Mater"]
+```
+Inserisce una copia di se stessa all'inizio
+```PYTHON
+lst[:0] = lst
+```
+### Liste annidate
+```PYTHON
+uno = ["one", 1]
+
+vero = ["true", 1, "1"]
+
+lst = [uno, vero, due, "Mio"]
+>>> lst 
+[['one', 1], ['true', 1, '1'], ['two', 2], 'Mio']
+```
+Uso di len() e append()
+```PYTHON
+uno.append("1")
+>>> lst 
+[['one', 1, '1'], ['true', 1, '1'], ['two', 2], 'Mio']
+>>> len(lst)
+4
+```
+
+
+
+
 
 
 
