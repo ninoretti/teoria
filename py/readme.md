@@ -37,7 +37,7 @@ Quando sono usati caratteri non ASCII
 `SyntaxError: Non-ASCII character "\xc3" in file secondo.py`
 
 inserire sotto la riga che contiene `#!`
-```
+```PYTHON
 # _*_ coding: iso-8859-1 _*_
 ```
 In python3 non è necessario
@@ -46,13 +46,13 @@ In python3 non è necessario
 
 `# Commento su singola riga `
 
-```
+```PYTHON
 """Commento su più linee
 """
 ```
 
 ### Stringhe
-```
+```PYTHON
 stringa1 = 'Questa è una stringa racchiusa con apici singoli'
 stringa2 = "Questa è una stringa racchiusa con apici doppi"
 ```
@@ -68,13 +68,14 @@ del capo che elli aveva di retro guasto\n"
 Nella stringa raw non sono necessari \n e \ diversamente saranno resi visibili
 come fossero caratteri ordinari. 
 
-```stringaRaw = r"Trasumanar significar per verba
+```PYTHON
+stringaRaw = r"Trasumanar significar per verba
 non si poria; però l'esemplio basti
 a cui esperienza Grazia serba."
 ```
 
 #### Stringe con uso delle triple """  o ''' 
-```
+```PYTHON
 longString = """Trasumanar significar per verba
 non si poria; però l'essemplo basti
 a cui esperienza grazia serba.
@@ -82,7 +83,7 @@ a cui esperienza grazia serba.
 ```
 
 ### Indicizzazione delle stringhe
-```
+```PYTHON
 parola = "Commedia" 
 >>> parola[4]
 'e'
@@ -106,19 +107,19 @@ parola = "Commedia"
 Le stringhe non possono essere modificate `parola[0] = P` non è consentita.
 
 #### Qualche errore:
-```
+```PYTHON
 >>> parola[10]  # errore out of range
 >>> parola[-100] # errore
 ```
 ### Non sono errori
-```
+```PYTHON
 >>> parola[0:10]
 'Commedia'
 >>> parola[-100:12] 
 'Commedia'
 ```
 ### Concatenazione delle stringhe
-```
+```PYTHON
 "Divina" + commedia
 "La Divina " + parola[0:7] + " di Dante"
 
@@ -134,13 +135,13 @@ Le stringhe non possono essere modificate `parola[0] = P` non è consentita.
  -0 
 ```
 ### Stringhe Unicode
-```
+```PYTHON
 >>> stringaUnicode = u"Questa\u0020è\u0020una\u0020stringa\u0020Unicode"
 u'Questa è una stringa Unicode'
 ```
 #### Stringa Unicode raw
 Applica la codifica Unicode nel caso le barre oblique siano dispari
-```
+```PYTHON
 >>> stringaUnicodeRaw = ur"Ciao\\u0020Mondo"
 u'Ciao\\u0020Mondo
 ```
