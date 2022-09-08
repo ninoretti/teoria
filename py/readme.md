@@ -1,8 +1,7 @@
 # Python
 _Fonte "Tutorial di Python" Versione 2.3.4_
 
-[Controllo flusso](flusso.md)
-[funzioni](funzioni.md)
+[Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md)
 
 ### Avviare python
 
