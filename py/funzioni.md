@@ -2,7 +2,7 @@
 
 | [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | 
 
-### Stringhe di documentazione
+### Le funzioni: le stringhe di documentazione
 Il primo rigo contiene il sommario inzia con una lettera maiuscola e termina con un punto.
 Si lascia una riga vuota e si scrive le convenzione di chiamata della funzione,
 gli effetti collaterali ecc.
@@ -19,7 +19,7 @@ Non fa nulla, ma lo documenta.
         Davvero non fa nulla.
 
 ```
-
+### Una semplice funzione: Fibonacci 
 ```PYTHON
 def fib(n):     # Definisce una funzione
     "Stampa una serie di Fibonacci fino a n"  # docstring
