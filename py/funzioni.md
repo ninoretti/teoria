@@ -1,6 +1,24 @@
 # Funzioni
 
-[ [Indice](readme.md) ][ [Controllo flusso](flusso.md) ][ [Funzioni](funzioni.md) ][
+| [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | 
+
+### Stringhe di documentazione
+Il primo rigo contiene il sommario inzia con una lettera maiuscola e termina con un punto.
+Si lascia una riga vuota e si scrive le convenzione di chiamata della funzione,
+gli effetti collaterali ecc.
+```PYTHON
+>>> def my_function():
+        """ Non fa nulla, ma lo documenta.
+        
+        Davvero non fa nulla.
+        """
+        pass
+>>> print my_function.__doc__
+Non fa nulla, ma lo documenta.
+        
+        Davvero non fa nulla.
+
+```
 
 ```PYTHON
 def fib(n):     # Definisce una funzione
@@ -109,10 +127,33 @@ Spampa. Ad ogni chiamata di funzione la lista L è impostata a []
 [2]
 [3]
 ```
-
-
-
-
+#### Funzioni con argomenti arbitrari
+Si usa l'operatore * (Ancora non è stato verificato ...)
 ```PYTHON
-
+args = [3, 6]
+range(* args)
 ```
+
+### Forme Lambda
+
+Una funzione senza nome ristretta ad una singola istruzione. 
+`lambda a, b : a + b` somma i suoi due argomenti. Le forme lambda posso riferirsi
+a variabili del proprio __scope che le contiene__
+```PYTHON
+>>> def make_increment(n):
+        return lambda x: x + n
+        
+f = make_increment(42) # Qui è un assegnamento di referenza
+                           # che permette di dare senso alla istruzione f(x)
+f(0)                       # il valore che riceve lambda e che incrementa con 42
+f(1)
+```
+```
+https://pythontutor.com/render.html#code=def%20make_incrementator%28n%29%3A%0A%20%20%20%20%20%20%20%20return%20lambda%20a,%20b%3A%20a%20%2B%20b%20%20%2B%20n%0A%20%20%20%20%20%20%20%20%0Af%20%3D%20make_incrementator%2822%29%0Ax%20%3D%20f%280,5%29%0Aprint%28x%29%0Ax%20%3D%20f%281,7%29%0Aprint%28x%29&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+```
+
+
+
+
+
+
