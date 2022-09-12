@@ -1,6 +1,6 @@
 # Le struttura
 
-| [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | 
+| [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | | [Moduli](moduli.md) | | [Strutture dati](strutture.md) | | [Moduli](moduli.md) | | [I/O](io.md)
 
 ## Le liste
 
@@ -187,15 +187,106 @@ Alcune operazione sugli insiemi
 ```
 ## Dizionari
 E' un insieme non ordinato di coppie `chiave, valore`: memoria associativa. 
+I dizionari sono indicizzati con le chiavi che devono essere uniche. 
+Se si memorizza un nuovo valore con una chiave già in uso il vecchio valore è sovrascritto.
+Le chiavi possono essere di un qualsiasi `tipo immutabile`. 
+
+* keys() restituisce i valori della chiavi in ordine casuale.
+* has_key() controlla se esiste una chiave
+
+```python
+>>> phone = {'jack': 2354, 'sape': 7564}
+>>> phone['guido'] = 3176          # Aggiunge un nuovo elemento 
+>>> phone
+{'jack': 2354, 'sape': 7564, 'guido': 3176}
+...
+>>> phone.keys()
+dict_keys(['jack', 'sape', 'guido'])
+
+print(phone.keys())    # stampa le chiavi
+
+for chiavi in phone.keys():     # stampa le coppie chiave valore
+    print(chiavi, end=" "), print(phone[chiavi])
+    
+# has_key() è stato rimosso in python3
+# print(phone.has_key('sape'))
+# AttributeError: 'dict' object has no attribute 'has_key'
+'sape' in phone # Al posto di has_key() è usato `in`
+
+```
+#### Il costruttore dict()
+
+```python
+>>> tel = dict([('jack', 2354), ('sape', 7564), ('guido', 3176)])
+
+```
+
+### Tecniche sui cicli
+
+Uso del metodo items() che associa i valori chiavi valori
+
+```python
+tel = dict([('jack', 2354), ('sape', 7564), ('guido', 3176)])
+for k, v in tel.items():  # sostituisce iteritems()
+    print(k, end=' '), print(v)
+
+```
+#### Enumarate
+Associa un contatore ad una sequenza, funziona sia tupla che lista che dict
+
+```python
+# Con una tupla
+>>> tocchi = ('tic', 'toc', 'tac')
+>>> for n, v in enumerate(tocchi):
+...    print(n, end=' '), print(v)
+0 tic
+1 toc
+2 tac
+```
+```python
+# Con un dizionario
+>>> tel = dict([('jack', 2354), ('sape', 7564), ('guido', 3176)])
+>>> for n, v in enumerate(tel):
+...   print(n, end=' '), print(v)
+0 jack
+1 sape
+2 guido
+```
+
+#### zip()
+Accoppia due o più sequenze 
+
+```python
+numeri = (1, 2, 3, 4, 5) # il 5 non è stampato, non è accoppiato
+lettere = ('a', 'b', 'c', 'd')
+for n, l in zip(numeri, lettere):
+    print(n, ' - ', l)          # stampa su una sola linea
+```
+#### Reversed()
+Esegue un ciclo su una sequenza inversa
+```python
+for i in reversed(range(0,30,3)):
+    if i % 2 == 0: print(i)
+```
+#### più condizioni
+
+`in` e `not` controllano se un valore compare o no in una sequenza
+
+#### Confronto tra sequenze dello stesso tipo
+Il confronto utilizza l'ordinamento lessicografico. Se i primi due elmenti sono uguali
+si passa al confronto dei successivi due, finche si stabilisce quale sequenza è maggiore minore o se sono uguali. 
+
+```python
+
+if (1,2,3) < (1,2,4): 
+
+```
 
 
+Se una sequenza è una sotto sequenza iniziale di un'altra, la più piccola è la minare.
+```python
 
-
-
-
-
-
-
+```
 
 
 
