@@ -1,6 +1,6 @@
 # Moduli
 
-| [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | | [Moduli](moduli.md) | | [Strutture dati](strutture.md) | | [Moduli](moduli.md) | | [I/O](io.md)
+| [Indice](readme.md) | [Controllo flusso](flusso.md) | [Funzioni](funzioni.md) | [Strutture dati](strutture.md) | [Moduli](moduli.md) | [Moduli](moduli.md) | [I/O](io.md) | [Errori e eccezioni](errori.md) | [Classi](classi.md) | [Libreria STD](libreria.md)
 
 ### Creazione di un modulo
 Quando aumenta la complessità di un programma, viene suddiviso in `moduli`. 
@@ -176,26 +176,6 @@ Esempio gli autori non vogliono fare importare tutte le funzioni o le varibili e
 __all__ = ["echo", "surround", "reverse"]
 ```
 Con la clausola ` * ` con questa definizione di `__all__` sono importate solo le tre funzioni 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
