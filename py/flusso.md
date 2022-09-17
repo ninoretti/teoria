@@ -47,8 +47,4 @@ while True:
     pass
 ```  
     
-    
-    
-    
-    
-    
+
