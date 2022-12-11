@@ -54,6 +54,9 @@ git config --list
 
 git config --global -l
     //Elenca solo le variabili di configurazione globali.
+    
+git config --global user.name "lnx-K5"
+git config --global user.email "lnx-K5@gmail.com"
 
 // 11 luglio 2021
 
