@@ -1,10 +1,19 @@
-# Youtube-dl
+# yt-dlp
 
-[youtube-dl guida ufficiale](https://github.com/ytdl-org/youtube-dl/blob/master/README.md)
+[yt-dlp guida ufficiale](https://github.com/ytdl-org/yt-dlp/blob/master/README.md)
+
+### istallazione
+
+```BASH
+sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp 
+```
+Aggiorna
++ sudo yt-dlp -U
 
 ### Richiesta formati disponibili
 ```BASH
-youtube-dl -F <video URL>
+yt-dlp -F <video URL>
 ```
 #### Youtube scarica video in diversi formati
 Diversi formati di youtube.com
@@ -14,23 +23,23 @@ Diversi formati di youtube.com
 
 __Video formato 720p__
 ```BASH
-youtube-dl -f 22 <video URL>
+yt-dlp -f 22 <video URL>
 ```
 __Video e sottotitoli automatici__
 ```BASH
-youtube-dl -f 22  --write-auto-sub <video URL>
+yt-dlp -f 22  --write-auto-sub <video URL>
 ```
 #### Solo sottotitoli automatic language
 ```BASH
-youtube-dl --write-auto-sub --skip-download <video URL>
+yt-dlp --write-auto-sub --skip-download <video URL>
 ```
 #### Solo sottotitoli in inglese en o italiano it
 ```BASH
-youtube-dl --write-auto-sub --sub-lang it --skip-download <video URL>
+yt-dlp --write-auto-sub --sub-lang it --skip-download <video URL>
 ```
 ### Estrazione mp3
 ```BASH
-youtube-dl --extract-audio --audio-format mp3 <video URL>
+yt-dlp --extract-audio --audio-format mp3 <video URL>
 ```
 ### Uno script utile
 Usare un file con tutti i link da scaricare
@@ -44,7 +53,7 @@ if [[ -z $1 ]]; then
     echo "Manca il file dei link"
     exit -1
 else 
-    yt="youtube-dl "
+    yt="yt-dlp "
     opt=$(echo "$2 $3 $4 $5 $6 $7 $8 $9")
 fi
 while read -r line; do
@@ -59,7 +68,7 @@ date
 ## Playlist
 
 ```BASH
-youtube-dl -i -f 22 --write-auto-sub --yes-playlist --playlist-end 5 /
+yt-dlp -i -f 22 --write-auto-sub --yes-playlist --playlist-end 5 /
 'https://www.youtube.com/playlist?list=PLjUC8HjyxGTS_kWuWJLanHLAkkg6Lombb'
 ```
 
@@ -88,12 +97,12 @@ Download the playlist, if the URL refers to a video and a playlist.
 #### Esempi utili con template
 + Download YouTube playlist videos in separate directory indexed by video order in a playlist
 ```BASH
-$ youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
+$ yt-dlp -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
 https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re
 ```
 + Download all playlists of YouTube channel/user keeping each playlist in separate directory:
 ```BASH
-$ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
+$ yt-dlp -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' /
 https://www.youtube.com/user/TheLinuxFoundation/playlists
 ```
 
