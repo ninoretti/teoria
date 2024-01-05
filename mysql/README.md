@@ -92,6 +92,10 @@ mysql> SELECT stato, count(*) AS Num FROM autori GROUP BY stato
 ```
 UPDATE autori SET stato = 'Italiano' WHERE stato = 'Italia';
 ```
+* TIMESTAMP
+```
+data TIMESTAMP default current_timestamp NOT NULL,
+```
 
 ### Modifica tabelle
 
