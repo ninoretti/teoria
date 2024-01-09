@@ -86,5 +86,5 @@ SecondaLista:
 - [x] Codice
 - [ ] Testo cancellato
 ```
-
+---
 
